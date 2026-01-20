@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import logo from "../photos/card-image.png";
 
 export default function Navbar() {
   /* TODO: Complete the navbar 
@@ -6,13 +7,28 @@ export default function Navbar() {
     - style as a navbar UI */
 
   return (
-    <header>
-      <strong>Card App</strong>
-      <nav>
-        <NavLink to="/" end>
+    <header className="header">
+
+      <Link to="/">
+        <img
+          className="logo"
+          src={logo}
+          alt="Card logo"
+          title="Home"
+        />
+      </Link>
+
+      <nav className="navbar">
+          <NavLink to="/" className="nav">
           Home
-        </NavLink>
-      </nav>
+          </NavLink>
+
+          <NavLink to="/cards" className="nav">
+          Cards
+          </NavLink>
+
+        </nav>
     </header>
   );
 }
+

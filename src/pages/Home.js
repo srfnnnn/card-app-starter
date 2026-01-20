@@ -5,5 +5,17 @@ export default function Home() {
     - display instructions
     - link to Cards page
     - style as a landing page */
-  return <main></main>;
+  return (
+    <div className="home">
+      <div >
+        <h1>Manage all your cards in one secure place.</h1>
+        <p>Track spending, organize cards, and stay in control of your finances with ease</p>
+      </div>
+
+      <div className="add">
+        <Link to="/addcard" className="addbutton">Add new card</Link>
+      </div>
+
+    </div>
+  );
 }
