@@ -10,7 +10,7 @@ export default function Card({card, onDelete, busy}) {
 
     return (
         <div className="display"> 
-                <img  className="display-image" src={card.card_pic} width='240' height='360'/>
+                <img  className="display-image" src={card.card_pic} alt={card.card_name} width='240' height='360'/>
                 <p className="headline">{card.card_name}</p>
                 <p className="headline">{card.id}</p>
 
