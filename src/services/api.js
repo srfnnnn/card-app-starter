@@ -59,34 +59,3 @@ export async function deleteCard(id) {
   });
   return res.json();
 }
-
-
-
-
-// export async function getCards() {
-//   try {
-//     console.log("Fetching cards from:", `${API_URL}/allcards`);
-//     const res = await fetch(`${API_URL}/allcards`);
-
-//     // Check HTTP status
-//     if (!res.ok) {
-//       throw new Error(`HTTP error! status: ${res.status}`);
-//     }
-
-//     const data = await res.json();
-//     console.log("Data received from API:", data);
-
-//     // Make sure we always return an array
-//     if (Array.isArray(data)) return data;
-//     if (Array.isArray(data?.cards)) return data.cards;
-
-//     console.warn("API returned unexpected format, returning empty array");
-//     return [];
-//   } catch (err) {
-//     console.error("Fetch error:", err);
-//     // rethrow for component to handle
-//     throw new Error(
-//       err.message || "Failed to fetch cards. Check API and CORS."
-//     );
-//   }
-// }

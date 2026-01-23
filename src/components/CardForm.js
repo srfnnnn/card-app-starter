@@ -7,7 +7,7 @@ export default function CardForm({ card, onChange, onSubmit, busy, error, submit
     <form onSubmit={onSubmit} className="card-form">
       {error && <p className="error" style={{ color: "red" }}>{error}</p>}
 
-      <div className="form-group">
+      <div className="cardform">
         <label htmlFor="card_name">Card Name:</label>
         <input
           type="text"
@@ -21,7 +21,7 @@ export default function CardForm({ card, onChange, onSubmit, busy, error, submit
         />
       </div>
 
-      <div className="form-group">
+      <div className="cardform">
         <label htmlFor="card_pic">Card URL:</label>
         <input
           type="url"
@@ -35,7 +35,7 @@ export default function CardForm({ card, onChange, onSubmit, busy, error, submit
         />
       </div>
 
-      <button type="submit" disabled={busy}>
+      <button className="click" type="submit" disabled={busy}>
         {busy ? "Saving..." : submitText}
       </button>
     </form>

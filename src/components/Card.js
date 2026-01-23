@@ -9,18 +9,18 @@ export default function Card({card, onDelete, busy}) {
       - style as a card UI */
 
     return (
-        <div>
-            <img src={card.card_pic} width='240' height='360'/>
-            <p>{card.card_name}</p>
-            <p>{card.id}</p>
+        <div className="display"> 
+                <img  className="display-image" src={card.card_pic} width='240' height='360'/>
+                <p className="headline">{card.card_name}</p>
+                <p className="headline">{card.id}</p>
 
-            <Link to={`/editcard/${card.id}`}>
-                <button disabled={busy}>Edit</button>
-            </Link>
+                <Link to={`/editcard/${card.id}`}>
+                <button className="clickEdit" disabled={busy}>Edit</button>
+                </Link>
 
-            <button disabled={busy} onClick={() => onDelete(card)}>
-                Delete
-            </button>
-        </div>
+                <button  className="clickDelete" disabled={busy} onClick={() => onDelete(card)}>
+                    Delete
+                </button>
+            </div>
     )
 }

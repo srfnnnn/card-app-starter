@@ -12,9 +12,9 @@ export default function AddCard() {
 
   const navigate = useNavigate();
 
-  const [values, setValues] = useState({
-    name: "",
-    number: "",
+  const [card, setCard] = useState({
+    card_name: "",
+    card_pic: "",
   });
 
   const [busy, setBusy] = useState(false);
@@ -22,7 +22,7 @@ export default function AddCard() {
 
   function handleChange(e) {
     const { name, value } = e.target;
-    setValues(prev => ({
+    setCard(prev => ({
       ...prev,
       [name]: value,
     }));
@@ -35,10 +35,7 @@ export default function AddCard() {
       setBusy(true);
       setError(null);
 
-      await addCard({
-        card_name: values.name,
-        card_pic: values.url
-      });
+      await addCard(card);
 
 
       navigate("/cards");
@@ -52,10 +49,10 @@ export default function AddCard() {
 
   return (
     <main className="form-page">
-      <h2>Add New Card</h2>
+      <h1 className="title">Add New Card</h1>
 
       <CardForm
-        values={values}
+        card={card}
         onChange={handleChange}
         onSubmit={handleSubmit}
         busy={busy}

@@ -30,6 +30,8 @@ code {
   color: black;
   text-decoration: none;
   gap: 20px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .header {
@@ -56,4 +58,131 @@ code {
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  width: 280px;
+}
+
+.card-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.cards {
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.headerHome {
+  background-color: rgb(248, 238, 203);
+  border-radius: 20px;
+  padding: 20px 30px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.display {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  width: 80%;
+  flex-direction: column;  
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.display-image {
+  width: 50%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card-list {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0 20px;
+  gap: 20px;
+  
+}
+
+.clickEdit {
+  background-color: beige;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  border-width: 1px;
+  padding: 12px 10px;
+  width: 100%;
+  border-radius: 20px;
+
+
+}
+
+.clickDelete {
+  background-color: beige;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  border-width: 1px;
+  padding: 12px 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.headline {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.cardform {
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+.cardform input {
+  border-radius: 10px;
+  border-width: 1px;
+  margin-left: 20px;
+  padding: 12px 15px;
+
+}
+
+.click {
+  background-color: beige;
+  font-weight: bold;
+  font-size: 15px;
+  border-width: 1px;
+  padding: 12px 28px;
+  margin-top: 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
 }

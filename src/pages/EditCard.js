@@ -49,7 +49,7 @@ export default function EditCard() {
 
     return (
         <main className="page">
-            <h1>Edit Card</h1>
+            <h1 className="title">Edit Card</h1>
 
             {loading ? (
                 <p>Loading...</p>
