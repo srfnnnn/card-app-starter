@@ -16,6 +16,20 @@ const API_URL = process.env.REACT_APP_API_URL;
  * - DELETE /deletecard/:id
  */
 
+function authHeader() { 
+  const token = localStorage.getItem("token"); 
+  return token ? { Authorization: `Bearer ${token}` } : {}; 
+} 
+ 
+
+export async function login(credentials) {
+  return fetch(`${API_URL}/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(credentials),
+  });
+}
+
 export async function getCards() {
   const res = await fetch(`${API_URL}/allcards`);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -28,12 +42,13 @@ export const getCardById = async (id) => {
     return res.json();
 };
 
-
+// Protect ONLY addCard in this demo 
 export async function addCard(card) {
   const res = await fetch(`${API_URL}/addcard`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      ...authHeader(), 
     },
     body: JSON.stringify(card),
   });

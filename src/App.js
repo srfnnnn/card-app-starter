@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import CardList from "./pages/CardList";
 import AddCard from "./pages/AddCard";
 import EditCard from "./pages/EditCard";
+import Login from "./pages/Login";
 import "./App.css";
 
 export default function App() {
@@ -12,10 +13,11 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/cards" element={<CardList />} />
         <Route path="/addcard" element={<AddCard />} />
         <Route path="/editcard/:id" element={<EditCard />} />
-        {/* TODO: Complete the routes */}
+
       </Routes>
     </BrowserRouter>
   );
