@@ -29,7 +29,7 @@ export default function Home() {
       </div>
 
       <h1 className="title">All Cards</h1>
-
+  
       {/* Cards Section */}
       <div className="cards">
 
